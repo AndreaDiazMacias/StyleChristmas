@@ -1,0 +1,779 @@
+* {
+  margin: auto;
+  padding: 0;
+}
+
+/*Estilos al body*/
+body {
+  background-image: url(Imagenes/pink-3861993_1920.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  font-family: "Belleza", sans-serif;
+  color:  rgb(107, 72, 16);
+}
+
+/*Estilos al logo*/
+.logo {
+  width: 250px;
+  height: 250px;
+  margin-left: 35%;
+  margin-top: 100px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Estilos al primer texto*/
+.textoDescripcion {
+  display: flex;
+  margin-top: 180px;
+  height: 110px;
+  width: 100%;
+  background-color: rgba(255, 236, 236, 0.705);
+  text-align: center;
+  align-items: center;
+  color: rgb(107, 72, 16);
+  font-family: "Belleza", sans-serif;
+}
+.textoDescripcion p {
+  width: 85%;
+}
+.adornos{
+  text-align: center;
+  margin-top: 100px;
+  color: rgb(107, 72, 16);
+}
+
+.adornos p{
+
+  margin-top: 50px;
+  font-size: large;
+  width: 50%;
+  padding: 20px;
+  background-color: rgba(240, 248, 255, 0.801);
+}
+
+
+
+/*Estilos al slider de los adornos*/
+.contenidoAdornos {
+  display: block;
+  font-size: small;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: white;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  height: 270px;
+  -webkit-overflow-scrolling: touch;
+}
+.touch .contenidoAdornos {
+  overflow: auto;
+}
+
+/*Estilos a las flechas del slider*/
+.contenidoAdornos[data-at*="left"] > .cintaUno::before {
+  opacity: 1;
+  text-indent: -50px;
+}
+.contenidoAdornos[data-at*="right"] > .cintaUno::after {
+  opacity: 1;
+  text-indent: -50px;
+}
+.contenidoAdornos::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  background: #d82b6a;
+  height: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  width: var(--scrollWidth, 0);
+  left: var(--scrollLleft, 0);
+  -webkit-transition: opacity 0.2s, bottom 0.2s;
+  transition: opacity 0.2s, bottom 0.2s;
+}
+.contenidoAdornos:hover::after {
+  opacity: 1;
+  bottom: -10px;
+}
+.contenidoAdornos > .cintaUno {
+  overflow: hidden;
+  border-radius: 4px;
+}
+.contenidoAdornos > .cintaUno::before, .contenidoAdornos > .cintaUno::after {
+  content: "\2039";
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 50px;
+  font-size: 80px;
+  text-indent: -30px;
+  line-height: 200px;
+  font-family: monospace;
+  color: #555;
+  font-weight: bold;
+  border-radius: 8px;
+  pointer-events: none;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+.contenidoAdornos > .cintaUno::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: auto;
+  right: 0;
+}
+
+/*Estilos a la lista */
+.contenidoAdornos > .cintaUno > ul {
+  list-style: none;
+  white-space: nowrap;
+  height: 300px;
+}
+.contenidoAdornos > .cintaUno > ul  > li {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  margin: 0 0 0 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+}
+.contenidoAdornos > .cintaUno > ul > li:first-child {
+  margin: 0;
+}
+/*Estilos a las imagenes del slider*/
+.contenidoAdornos > .cintaUno> ul > li > a > img {
+  width: 100%;
+  display: block;
+  height: 75%;
+  margin: auto;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+/*Estilos generales al contenedor de los adornos*/
+.contenidoAdornos {
+  margin-top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  max-width: 1000px;
+  min-width: 400px;
+ 
+}
+/*Estilos al texto de las imagenes*/
+.cintaUno p{
+  margin-top: -20px;
+  width: 100%;
+  height: 22px;
+}
+
+.cenaNavidad{
+
+  margin-top: 100px;
+  align-content: center;
+}
+
+.textoCena input{
+  position: absolute;
+  margin-left: -190px;
+  margin-top: 120px;
+  padding: 10px;
+background-color: rgba(255, 236, 236, 0.952);
+border: none;
+box-shadow: 0 8px 16px 0  rgb(107, 72, 16);
+width: 380px;
+color: rgb(107, 72, 16);
+font-family: "Belleza", sans-serif;
+font-size: large;
+cursor: pointer;
+}
+
+.textoCena input:hover{
+  box-shadow: 2px 12px 18px 0  rgb(107, 72, 16)
+}
+.imagenCena{
+  margin-top: 30px;
+}
+
+
+
+/*Estilos al segundo slider*/
+
+.contenidoArboles {
+  display: block;
+  font-size: small;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: white;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  height: 270px;
+  -webkit-overflow-scrolling: touch;
+}
+.touch .contenidoArboles {
+  overflow: auto;
+}
+
+/*Estilos a las flechas del slider*/
+.contenidoArboles[data-at*="left"] > .arboes::before {
+  opacity: 1;
+  text-indent: -50px;
+}
+.contenidoArboles[data-at*="right"] > .arboles::after {
+  opacity: 1;
+  text-indent: -50px;
+}
+.contenidoArboles::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  background: #d82b6a;
+  height: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  width: var(--scrollWidth, 0);
+  left: var(--scrollLleft, 0);
+  -webkit-transition: opacity 0.2s, bottom 0.2s;
+  transition: opacity 0.2s, bottom 0.2s;
+}
+.contenidoArboles:hover::after {
+  opacity: 1;
+  bottom: -10px;
+}
+.contenidoArboles > .arboles {
+  overflow: hidden;
+  border-radius: 4px;
+}
+.contenidoArboles > .arboles::before, .contenidoArboles > .arboles::after {
+  content: "\2039";
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 50px;
+  font-size: 80px;
+  text-indent: -30px;
+  line-height: 200px;
+  font-family: monospace;
+  color: #555;
+  font-weight: bold;
+  border-radius: 8px;
+  pointer-events: none;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+.contenidoArboles > .arboles::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: auto;
+  right: 0;
+}
+
+/*Estilos a la lista */
+.contenidoArboles > .arboles> ul {
+  list-style: none;
+  white-space: nowrap;
+  height: 300px;
+}
+.contenidoArboles > .arboles > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  margin: 0 0 0 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+}
+.contenidoArboles > .arboles > ul > li:first-child {
+  margin: 0;
+}
+/*Estilos a las imagenes del slider*/
+.contenidoArboles > .arboles> ul > li > a > img {
+  width: 100%;
+  display: block;
+  height: 75%;
+  margin: auto;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+/*Estilos generales al contenedor de los adornos*/
+.contenidoArboles {
+  margin-top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  max-width: 1000px;
+  min-width: 400px;
+ 
+}
+/*Estilos al texto de las imagenes*/
+.arboles p{
+  margin-top: -20px;
+  width: 100%;
+  height: 22px;
+}
+
+/*Estilos al tercer slider (luces)*/
+
+.contenidoLuces {
+  display: block;
+  font-size: small;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: white;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  height: 270px;
+  -webkit-overflow-scrolling: touch;
+}
+.touch .contenidoLuces {
+  overflow: auto;
+}
+
+/*Estilos a las flechas del slider*/
+.contenidoLuces[data-at*="left"] > .luces::before {
+  opacity: 1;
+  text-indent: -50px;
+}
+.contenidoLuces[data-at*="right"] > .luces::after {
+  opacity: 1;
+  text-indent: -50px;
+}
+.contenidoLuces::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  background: #d82b6a;
+  height: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  width: var(--scrollWidth, 0);
+  left: var(--scrollLleft, 0);
+  -webkit-transition: opacity 0.2s, bottom 0.2s;
+  transition: opacity 0.2s, bottom 0.2s;
+}
+.contenidoLuces:hover::after {
+  opacity: 1;
+  bottom: -10px;
+}
+.contenidoLuces > .luces {
+  overflow: hidden;
+  border-radius: 4px;
+}
+.contenidoLuces > .luces::before, .contenidoLuces > .luces::after {
+  content: "\2039";
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 50px;
+  font-size: 80px;
+  text-indent: -30px;
+  line-height: 200px;
+  font-family: monospace;
+  color: #555;
+  font-weight: bold;
+  border-radius: 8px;
+  pointer-events: none;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+.contenidoLuces > .luces::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: auto;
+  right: 0;
+}
+
+/*Estilos a la lista */
+.contenidoLuces > .luces> ul {
+  list-style: none;
+  white-space: nowrap;
+  height: 300px;
+}
+.contenidoLuces > .luces > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  margin: 0 0 0 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+}
+.contenidoLuces > .luces > ul > li:first-child {
+  margin: 0;
+}
+/*Estilos a las imagenes del slider*/
+.contenidoLuces > .luces> ul > li > a > img {
+  width: 100%;
+  display: block;
+  height: 75%;
+  margin: auto;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+/*Estilos generales al contenedor de los adornos*/
+.contenidoLuces {
+  margin-top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  max-width: 1000px;
+  min-width: 400px;
+ 
+}
+/*Estilos al texto de las imagenes*/
+.luces p{
+  margin-top: -20px;
+  width: 100%;
+  height: 22px;
+}
+
+
+.arbolesNavidad{
+  margin-top: 100px;
+}
+
+
+/*Estilos al slider luces*/
+
+.lucesNavidad{
+  margin-top: 100px;
+}
+
+.footer{
+  text-align: center;
+  margin-top: 100px;
+  height: 200px;
+  background-color: rgba(255, 236, 236, 0.705);
+}
+
+.footer p{
+  margin-top: 70px;
+  padding-top: 15px;
+  text-align: center;
+  color: rgb(107, 72, 16);
+  background-color: rgba(255, 236, 236, 0);
+  font-size: large;
+  width: 200px;
+}
+
+.footerImagenes img{
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+
+
+/*******************************************Estilos a os productos***********************/
+
+/*Estilos al logo*/
+.logoProductos {
+  width: 150px;
+  height: 150px;
+  margin-left: 30%;
+  margin-top: 100px;
+}
+.logoProductos img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Estilo al precio del producto*/
+.precio{
+  text-align: center;
+  margin-top: 100px;
+  background-color: rgba(240, 248, 255, 0.801);
+  color: rgb(107, 72, 16);
+}
+/*Estilos generales al contenedor de las fotos grandes*/
+.fotos{
+  margin-top: 20px;
+  max-width:600px;  
+  text-align: center;
+  align-content: center;
+}
+/*Estilos a las fotos grandes*/
+.fotoSlider{
+  text-align: center;
+  align-content: center;
+  width: 100%;
+}
+
+/*Estilos a la primera foto grande*/
+#Uno{ 
+  width: 80%;
+  text-align: center;
+  align-content: center;
+}
+/*Estilos a la segunda foto grande*/
+#Dos{
+  width: 80%;
+  display: none;
+}
+
+/*Estilos a las fotos pequeñas en general*/
+.fotosArreglos{
+  margin-top: 20px;
+  display: flex;
+  width: 300px;
+  opacity: 0.8;
+  text-align: center;
+  align-content: center;
+}
+/*Fotos pequeñas ...mas estilos*/
+.fotosContenido img, .fotosContenidoDos img{
+ width: 100px;
+  cursor: pointer;
+}
+/*Estilos a la primera foto pequeña*/
+#arregloUno:hover{
+ border: 2px solid rgb(107, 72, 16);
+}
+/*Estilos a la segunda foto pequeña*/
+#arregloDos:hover{
+  border: 2px solid rgb(107, 72, 16);
+}
+/*Estilos generales a la descripcion del producto*/
+.descripcion{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+/*Estilos al titulo de descripcion*/
+.descripcion h3{
+  margin-top: 50px;
+  text-align: center;
+  color:rgb(107, 72, 16);
+}
+/*Estilos a la tabla de la descripcion*/
+table{
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th{
+  text-align: center;
+  background-color:  rgb(107, 72, 16);
+  color: rgba(240, 248, 255, 0.801);
+  padding: 7px;
+}
+
+td{
+  text-align: center;
+  padding: 7px;
+  background-color: rgba(240, 248, 255, 0.801)
+}
+
+/*Estilos al contenedor del boton*/
+.cajaBoton{
+  display: flex;
+  align-content: center;
+}
+/*Estilos al boton*/
+#botonCompra{
+ width: 200px;
+ height: 50px;
+ color:  rgb(107, 72, 16);
+ background-color: rgba(240, 248, 255, 0.801) ;
+ border: 2px solid rgb(107, 72, 16) ;
+ font-size: large;
+ font-family: "Belleza", sans-serif;
+ cursor: pointer;
+}
+/*Hover al boton*/
+#botonCompra:hover{
+  background-color: rgb(107, 72, 16);
+  color: rgba(240, 248, 255, 0.801) ;
+}
+
+/*Estilos a la pagina de cena*/
+.descripcionCena img{
+  width: 100%;
+  height: 100%;
+}
+/*Estilos al h3 de cena*/
+.textoEncimaImagen{
+  text-align: center;
+  position: absolute;
+  margin-top:-180px ;
+  padding: 10px;
+  background-color: rgba(240, 248, 255, 0.801);
+  border: 3px solid rgb(107, 72, 16);
+  height: 30px;
+  width: 100%;
+}
+
+/*Estilos a las opciones de la cena en general*/
+.opcionesCena{
+  text-align: center;
+}
+/*Estilos a las opciones mas especificas*/
+.proteinaCena, .acompañamientoCena, .ensaladasCena, .postreCena{
+  margin-top: 20px;
+}
+
+.proteinaCena form, .acompañamientoCena form, .ensaladasCena form, .postreCena form{
+  margin-top: 5px;
+}
+/*Estilos al boton de compra*/
+.cajaBoton{
+  margin-top: 40px;
+}
+/*Medias querys*/
+/*Medias querys de mas 550px*/
+@media screen and (min-width: 550px) {
+  .logo {
+    margin-left: 45%;
+}
+}
+/*Medias querys de mas de 800px*/
+@media screen and (min-width: 800px) {
+  .logo {
+    margin-left: 50%;
+    width: 300px;
+  height: 300px;
+  margin-top: 80px;
+  }
+  .textoDescripcion {
+  font-size: large;
+  }
+
+  .contenidoCintas{
+    margin-top: 60px;
+    display: flex;
+  }
+  .cintaUno img, .adornoAngel img, .esferasGrises img, .adornoEstrellas img{
+    width: 300px;
+    height: 300px;
+  }
+  
+}
+/*Medias querys de mas de 1000px*/
+@media screen and (min-width: 1000px) {
+  .logoProductos {
+    width: 250px;
+    height: 250px;
+    margin-left: 60%;
+    margin-top: 30px;
+  }
+  .logoProductos img {
+    width: 100%;
+    height: 100%;
+  }
+  .textoDescripcion{
+    height: 250px;
+    font-size: large;
+    margin-top: 80px;
+  }
+  .textoDescripcion p{
+    width: 75%;
+  }
+  .cenaNavidad{
+    display: flex;
+    margin-top: 100px;
+    background-color: rgba(240, 248, 255, 0.801) ;
+    height: 400px;
+  }
+  .textoCena input{
+    position: relative;
+    margin-top: 10px;
+    padding: 10px;
+    width: 414px;
+    margin-left: 0px;
+    padding: 10px;
+  }
+  .textoCena h2{
+    margin-top: -10px;
+  }
+  .textoCena p{
+  margin-top: 20px;
+  }
+  
+  .imagenCena{
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+    
+  }
+  .imagenCena img{
+    height: 100%;
+    width: 100%;
+  }
+
+  .precio{
+    margin-top: 10px;
+    padding-top: 15px;
+    height: 80px;
+
+  }
+
+  .descripcionCena{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+    background-color: rgba(240, 248, 255, 0.801) ;
+    height: 500px;
+  }
+  .descripcionCena img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .descripcionCena h3{
+    position: static;
+    margin-top: 0;
+    border: none;
+    margin-left: 30%;
+    background-color: rgba(255, 236, 236, 0.705);
+    border: 2px solid rgb(107, 72, 16);
+    width: 50%;
+  }
+  .opcionesCena{
+    text-align: center;
+    margin-left: 56%;
+    margin-top: -450px;
+  }
+  .cajaBoton{
+    margin-top: 100px;
+  }
+  }
+  
